@@ -1,0 +1,303 @@
+.modal_hairstyle_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white_light;
+    box-shadow: 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 11px 15px -7px rgba(0, 0, 0, 0.2);
+    width: 68%;
+    height: 500px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+
+    .modal_img {
+        width: 400px;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+            0 0 0 2px rgb(190, 190, 190),
+            0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+        img {
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: 0.3s linear;
+            object-fit: cover;
+            object-position: top;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .modal_data {
+        width: 520px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .modal_title {
+        font-size: 30px;
+        color: $black_light;
+        font-family: $montserrat;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    .modal_suptitle {
+        color: $gray_light;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: $lato;
+    }
+
+    .modal_hisory_title {
+        font-size: 26px;
+        color: $black_light;
+        font-family: $montserrat;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    .modal_history {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .modal_list {
+        list-style: initial;
+        margin-left: 40px;
+        color: $gray_light;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: $lato;
+
+        span {
+            color: $black_light;
+            font-family: $montserrat;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 18px;
+        }
+
+        &::marker {
+            color: $gray_light;
+        }
+    }
+
+    .modal_category {
+        color: $black_light;
+        font-family: $montserrat;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding-top: 10px;
+
+        span {
+            font-size: 18px;
+            color: #444;
+            font-family: 300;
+            font-size: 15px;
+        }
+    }
+}
+
+.modal_product_close {
+    border-radius: 5px;
+    border: 1px solid $red_light;
+    color: $red_light;
+    font-size: 24px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #00000000;
+    cursor: pointer;
+    transition: .3s linear;
+
+    &:hover {
+        background: $red_light;
+        color: $white_light;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .modal_hairstyle_wrapper {
+        height: 370px;
+        padding-top: 30px;
+
+        .modal_title {
+            font-size: 26px;
+        }
+
+        .modal_suptitle {
+            font-size: 14px;
+        }
+
+
+        .modal_hisory_title {
+            font-size: 22px;
+        }
+
+        .modal_list {
+            font-size: 14px;
+
+            span {
+                font-size: 16px;
+            }
+        }
+
+        .modal_category {
+            span {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .modal_hairstyle_wrapper {
+        height: 300px;
+
+        .modal_title {
+            font-size: 22px;
+        }
+
+        .modal_suptitle {
+            font-size: 10px;
+        }
+
+
+        .modal_hisory_title {
+            font-size: 20px;
+        }
+
+        .modal_list {
+            font-size: 12px;
+
+            span {
+                font-size: 13px;
+            }
+        }
+
+        .modal_category {
+            span {
+                font-size: 11px;
+            }
+        }
+
+        .modal_product_close {
+            font-size: 14px;
+            right: 12px;
+            top: 12px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .modal_hairstyle_wrapper {
+        width: 80%;
+        height: 280px;
+
+        .modal_title {
+            font-size: 18px;
+        }
+
+        .modal_hisory_title {
+            font-size: 17px;
+        }
+
+        .modal_history {
+            gap: 10px;
+        }
+
+        .modal_list {
+            font-size: 10px;
+
+            span {
+                font-size: 11px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 620px) {
+    .modal_hairstyle_wrapper {
+        width: 85%;
+        max-height: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        gap: 20px;
+        padding-top: 30px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .modal_img {
+            width: 280px;
+            height: 310px;
+        }
+
+        .modal_data {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal_title,
+        .modal_suptitle {
+            text-align: center;
+        }
+
+        .modal_list {
+            text-align: center;
+            list-style: none;
+            margin-left: 0px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .modal_hairstyle_wrapper {
+        .modal_img {
+            width: 240px;
+            height: 270px;
+        }
+
+        .modal_product_close {
+            top: 8px;
+            right: 8px;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .modal_hairstyle_wrapper {
+        .modal_img {
+            width: 220px;
+           height: 250px;
+        }
+    }
+}

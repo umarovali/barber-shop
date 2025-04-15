@@ -1,0 +1,164 @@
+.home_services {
+    padding: 40px 0px;
+
+    .serviuces_title {
+        text-align: center;
+        font-size: 34px;
+        color: $white_light;
+        font-family: $montserrat;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        & span {
+            color: $red_light;
+            font-weight: 700;
+            font-size: 38px;
+        }
+    }
+
+    .services_suptitle {
+        font-size: 16px;
+        color: #ffffffc3;
+        padding-top: 20px;
+        font-family: $montserrat;
+        font-weight: 400;
+        line-height: 22px;
+        width: 430px;
+    }
+
+
+    .sevice_box {
+        background: #fff;
+        width: 600px;
+        margin: 0 auto;
+        border-radius: 15px;
+        padding: 20px 40px;
+        margin-top: 40px;
+    }
+
+    .sevice_type {
+        color: $golden_light;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: 1px;
+        font-family: $lato;
+    }
+
+    .sevice_card {
+        height: 50px;
+        border-bottom: 2px solid $golden_light;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .sevice_name {
+        color: $black_light;
+        font-family: $montserrat;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 100%;
+    }
+
+    .service_price {
+        color: $golden_light;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .service_card_details {
+        display: flex;
+        align-items: center;
+        color: #1c1c1cc0;
+        font-family: $lato;
+        font-size: 15px;
+        padding-top: 2px;
+        transition: 0.3s linear;
+
+        &:hover {
+            color: #1c1c1c;
+            cursor: pointer;
+            font-size: 17px;
+        }
+    }
+
+    .servise_suptitle {
+        position: absolute;
+        bottom: 60%;
+        left: 0px;
+        width: 200px;
+        background: black;
+        color: #fff;
+        z-index: 100;
+        margin-bottom: 20px;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 6px;
+        letter-spacing: 1px;
+    }
+
+    .service_btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+
+        button {
+            background: $red_light;
+            margin-top: 10px;
+            text-transform: initial;
+            letter-spacing: 2.5px;
+            font-family: $montserrat;
+            width: 160px;
+            height: 40px;
+            font-size: 19px;
+
+            &:hover {
+                background: #a90202;
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+@media (max-width: 765px) {
+    .home_services {
+
+        .services_suptitle {
+            width: 100%;
+        }
+
+        .sevice_box {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .home_services {
+        .sevice_type {
+            font-size: 29px;
+        }
+
+        .sevice_name {
+            font-size: 17px;
+        }
+
+        .service_price {
+            font-size: 20px;
+        }
+
+        .service_card_details {
+            font-size: 13px;
+
+            &:hover {
+                font-size: 15px;
+            }
+        }
+
+        .servise_suptitle {
+            font-size: 12px;
+        }
+    }
+}

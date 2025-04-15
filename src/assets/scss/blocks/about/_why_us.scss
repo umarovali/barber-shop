@@ -1,0 +1,123 @@
+.why_us {
+    padding-top: 40px;
+
+    .why_us_title {
+        font-size: 34px;
+        color: $white_light;
+        font-family: $montserrat;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-align: center;
+
+        & span {
+            color: $red_light;
+            font-weight: 700;
+            font-size: 38px;
+        }
+    }
+
+    .why_us_suptitle {
+        padding-top: 10px;
+        font-size: 16px;
+        color: #ffffffc3;
+        font-family: $montserrat;
+        font-weight: 400;
+        line-height: 22px;
+        width: 350px;
+        text-align: center;
+    }
+
+    .why_us_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .why_us_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .whu_list_bg_icon {
+        width: 50px;
+        height: 50px;
+        background: $white_light;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $red_light;
+    }
+
+    .why_us_list_icon {
+        color: $red_light;
+        font-size: 37px;
+    }
+
+    .why_us_list_title {
+        font-size: 27px;
+        color: $white_light;
+        font-family: $montserrat;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .why_us_list_suptitle {
+        width: 380px;
+        text-align: center;
+        color: #ffffffc3;
+        padding-top: 8px;
+        letter-spacing: 1px;
+    }
+
+    .why_us_hr {
+        margin: 30px 0px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .why_us {
+        .why_us_list_title {
+            font-size: 24px;
+        }
+
+        .why_us_list_suptitle {
+            font-size: 16px;
+            width: 350px;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .why_us {
+        .why_us_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .why_us {
+        .why_us_list_suptitle {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .why_us {
+        .why_us_title {
+            width: 100%;
+        }
+
+        .why_us_suptitle {
+            width: 100%;
+        }
+    }
+}

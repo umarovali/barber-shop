@@ -1,0 +1,138 @@
+.book_an_modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background-color: $white_light;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .book_an_text {
+        font-family: $montserrat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $black_light;
+        letter-spacing: 1px;
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .book_an_title {
+        color: $black_light;
+        text-align: center;
+        font-size: 25px;
+        font-family: $lato;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    .book_an_form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 30px;
+
+
+        .book_an_input {
+            position: relative;
+
+            input {
+                width: 100%;
+                padding: 10px 10px;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                background-color: #f1f1f1;
+                color: #333;
+                font-size: 16px;
+                font-weight: 550;
+                transition: 0.3s ease-in-out;
+                box-shadow: 0 0 0 5px transparent;
+                box-sizing: border-box;
+                box-shadow: 0px 0px 5px 4px #0000002a;
+            }
+
+            input:hover,
+            input:focus {
+                box-shadow: 0px 0px 5px 6px #0000002a;
+            }
+
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding: 8px 15px;
+                color: #333;
+                font-size: 16px;
+                font-weight: 600;
+                text-shadow: -1px -1px 0 #f1f1f1, 1px -1px 0 #f1f1f1, -1px 1px 0 #f1f1f1, 1px 1px 0 #f1f1f1;
+                transition: 0.3s ease-in-out;
+                pointer-events: none;
+            }
+
+            input:focus+span,
+            input:valid+span {
+                transform: translateY(-32px) translateX(-5px) scale(0.95);
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        .book_an_date_time {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .book_an_date {
+            width: 60%;
+            padding: 8px 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            box-shadow: 0px 0px 5px 4px #0000002a;
+            box-sizing: border-box;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                box-shadow: 0px 0px 5px 6px #0000002a;
+            }
+        }
+
+        .book_an_time {
+            width: 25%;
+            padding: 10px 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            box-shadow: 0px 0px 5px 4px #0000002a;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .book_an_btn {
+
+            display: flex;
+            justify-content: center;
+
+            button {
+                background: $red_light;
+                width: 80%;
+                border-radius: 3px;
+                letter-spacing: 2px;
+                font-family: $montserrat;
+                font-size: 21px;
+                line-height: 100%;
+                height: 40px;
+            }
+        }
+
+        
+    }
+}

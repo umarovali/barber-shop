@@ -1,0 +1,114 @@
+.home_book_an {
+    padding-top: 40px;
+
+    .book_ann_title {
+        text-align: center;
+        font-size: 34px;
+        color: $white_light;
+        font-family: $montserrat;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        & span {
+            color: $red_light;
+            font-weight: 700;
+            font-size: 38px;
+        }
+    }
+
+    .book_an_suptitle {
+        font-size: 16px;
+        color: #ffffffc3;
+        padding-top: 20px;
+        font-family: $montserrat;
+        font-weight: 400;
+        line-height: 22px;
+        width: 370px;
+    }
+
+    .book_an_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .book_an_content_title {
+        font-size: 30px;
+        color: $white_light;
+        font-family: $montserrat;
+        font-weight: 500;
+        letter-spacing: 1px;
+        width: 340px;
+
+        span {
+            color: $red_light;
+            font-weight: 700;
+            font-size: 34px;
+        }
+    }
+
+    .book_an_content_suptitle {
+        font-size: 16px;
+        color: #ffffffc3;
+        padding-top: 8px;
+        font-family: $montserrat;
+        font-weight: 400;
+        line-height: 22px;
+        width: 440px;
+    }
+
+    .book_an_btn button {
+        background: $red_light;
+        margin-top: 10px;
+        text-transform: initial;
+        letter-spacing: 2.5px;
+        font-family: $montserrat;
+        width: 180px;
+        height: 40px;
+        font-size: 19px;
+        position: relative;
+
+        &:hover {
+            background: #a90202;
+            transform: scale(1.02);
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .home_book_an {
+        .book_an_wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 20px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .book_an_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .book_an_content_title {
+            width: 100%;
+            text-align: center;
+        }
+
+        .book_an_content_suptitle {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .home_book_an {
+        .book_an_suptitle {
+            width: 100%;
+        }
+    }
+}

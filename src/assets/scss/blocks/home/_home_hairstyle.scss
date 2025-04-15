@@ -1,0 +1,111 @@
+.home_hairstyle {
+    padding: 40px 0px;
+
+    .hairstyle_left_right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hairstyle_title {
+        font-size: 34px;
+        color: $white_light;
+        font-family: $montserrat;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        & span {
+            color: $red_light;
+            font-weight: 700;
+            font-size: 38px;
+        }
+    }
+
+    .hairstyle_suptitle {
+        padding-top: 10px;
+        font-size: 16px;
+        color: #ffffffc3;
+        font-family: $montserrat;
+        font-weight: 400;
+        line-height: 22px;
+        width: 350px;
+    }
+
+    .hairstyle_btn {
+        button {
+            background: $red_light;
+            margin-top: 10px;
+            text-transform: initial;
+            letter-spacing: 2.5px;
+            font-family: $montserrat;
+            width: 180px;
+            height: 40px;
+            font-size: 19px;
+
+            &:hover {
+                background: #a90202;
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    .hairstyle_scroll {
+        overflow-x: scroll;
+        margin-top: 30px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .hairstyle_wrapper {
+        display: flex;
+        gap: 30px;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 620px) {
+    .home_hairstyle {
+        .hairstyle_left_right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hairstyle_title {
+            width: 100%;
+            text-align: center;
+        }
+
+        .hairstyle_suptitle {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .home_hairstyle {
+        .hairstyle_title {
+            font-size: 28px;
+
+            span {
+                font-size: 32px;
+            }
+        }
+
+        .hairstyle_suptitle {
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .hairstyle_btn {
+            button {
+                font-size: 16px;
+                width: 150px;
+                height: 35px;
+            }
+        }
+    }
+}

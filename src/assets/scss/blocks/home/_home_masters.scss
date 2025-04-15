@@ -1,0 +1,197 @@
+.home_masters {
+    padding-top: 40px;
+    padding-bottom: 30px;
+
+    .master_title {
+        font-size: 34px;
+        color: $white_light;
+        font-family: $montserrat;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-align: center;
+
+        & span {
+            color: $red_light;
+            font-weight: 700;
+            font-size: 38px;
+        }
+    }
+
+    .master_suptitle {
+        font-size: 16px;
+        color: #ffffffc3;
+        padding-top: 10px;
+        font-family: $montserrat;
+        font-weight: 400;
+        line-height: 22px;
+        width: 300px;
+    }
+}
+
+.master_kinds {
+    .master_kinds_navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .master_link_white,
+    .master_link_red {
+        padding: 10px 30px 13px 30px;
+        font-size: 22px;
+        background: transparent;
+        font-family: $montserrat;
+        letter-spacing: 2px;
+        font-weight: 500;
+        border: none;
+        border-bottom: 3px solid;
+        cursor: pointer;
+        transition: color 0.5s, border-bottom-color 0.5s;
+        outline: none;
+    }
+
+    .master_link_white {
+        color: $white_light;
+        border-bottom-color: $white_light;
+
+        &:hover {
+            color: $red_light;
+            border-bottom-color: $red_light;
+        }
+    }
+
+    .master_link_red {
+        color: $red_light;
+        border-bottom-color: $red_light;
+    }
+}
+
+.masters_option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 40px;
+
+    .masters_option_data {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .masters_option_foto {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .masters_option_title {
+        color: $white_light;
+        font-size: 38px;
+        font-weight: 700;
+        font-family: $lato;
+        text-align: start;
+        letter-spacing: 2px;
+    }
+
+    .masters_option_suptitle {
+        color: #ffffffc3;
+        font-size: 20px;
+        letter-spacing: 1px;
+        width: 400px;
+    }
+
+    .master_book_an {
+        button {
+            background: $red_light;
+            margin-top: 10px;
+            text-transform: initial;
+            letter-spacing: 2.5px;
+            font-family: $montserrat;
+            width: 160px;
+            height: 40px;
+            font-size: 19px;
+
+            &:hover {
+                background: #a90202;
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .masters_option {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .masters_option_data {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .masters_option_suptitle {
+            width: 70%;
+            text-align: center;
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .masters_option {
+
+        .masters_option_title {
+            font-size: 34px;
+        }
+
+        .masters_option_suptitle {
+            font-size: 16px;
+            letter-spacing: 1px;
+            width: 100%;
+        }
+
+        .masters_option_foto {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .master_kinds {
+
+        .master_link_white,
+        .master_link_red {
+            font-size: 16px;
+            padding: 10px 10px 13px 10px;
+        }
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .home_masters {
+        .master_suptitle {
+            width: 100%;
+        }
+    }
+
+    .master_kinds {
+        .master_kinds_navbar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .master_link_white,
+        .master_link_red {
+            font-size: 18px;
+            padding: 10px 10px 13px 10px;
+        }
+    }
+}

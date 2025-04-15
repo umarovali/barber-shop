@@ -1,0 +1,146 @@
+.home_review_modal_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: $white_light;
+    box-shadow: 0 24px 24px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+
+    .modal_avatar {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .modal_avatar_name {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .avatar.placeholder {
+            &::before {
+                content: 'Avatar';
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+
+        .modal_name {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+            &:focus {
+                border-color: $red_light;
+                box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+                outline: none;
+            }
+        }
+    }
+
+    .modal_content {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: none;
+        outline: none;
+        height: 80px;
+        box-sizing: border-box;
+
+        &:focus {
+            border-color: $red_light;
+            box-shadow: 0 0 8px #9909096f;
+            outline: none;
+        }
+    }
+
+    .modal_add {
+        padding: 10px 20px;
+        background-color: $red_light;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #990909;
+        }
+    }
+
+    .modal_close {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 70px;
+        border-radius: 5px;
+        border: 2px solid $red_light;
+        color: $red_light;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: transparent;
+        transition: 0.3s linear;
+
+        &:hover {
+            background: $red_light;
+            color: $white_light;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .home_review_modal_content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home_review_modal_content {
+
+        .modal_avatar {
+            width: 70px;
+            height: 70px;
+        }
+
+        .modal_avatar_name {
+            padding-top: 10px;
+            .avatar {
+                width: 70px;
+                height: 70px;
+            }
+
+            .modal_name {
+                padding: 5px 10px;
+                width: 100%;
+            }
+        }
+
+        .modal_close {
+            width: 25px;
+            height: 25px;
+            font-size: 50px;
+        }
+    }
+}

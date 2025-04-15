@@ -1,0 +1,121 @@
+.cart {
+    margin-top: 100px;
+
+    .cart_title_empty {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .cart_empty button {
+        background: $red_light;
+        border-radius: 3px;
+        letter-spacing: 2px;
+        font-family: $montserrat;
+        font-size: 22px;
+        line-height: 100%;
+        text-transform: initial;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 15px;
+    }
+
+    .cart_title {
+        color: $white_light;
+        font-size: 34px;
+        font-family: $montserrat;
+        text-shadow: 2px 2px 4px #f9f9f931;
+        text-align: center;
+        letter-spacing: 2px;
+
+        span {
+            color: $red_light;
+            font-size: 36px;
+        }
+    }
+    
+    .cart_your_empty {
+        color: $white_light;
+        font-size: 40px;
+        font-family: $montserrat;
+        text-shadow: 2px 2px 4px #f9f9f931;
+        letter-spacing: 2px;
+    }
+
+    .cart_left_right {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    .cart_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cart_right {
+        width: 400px;
+        border-radius: 15px;
+        height: 100%;
+        padding: 16px;
+        background: $white_light;
+        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    }
+
+    .cart_right_title {
+        color: $black_light;
+        font-size: 26px;
+        font-family: $montserrat;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .cart_rgiht_hr {
+        width: 100%;
+        height: 2px;
+        background: $black_light;
+        border-radius: 1px;
+        margin: 10px 0px;
+    }
+
+    .cart_right_subtotal {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px 12px;
+    }
+
+    .cart_order {
+        button {
+            background: $red_light;
+            border-radius: 3px;
+            letter-spacing: 2px;
+            font-family: $montserrat;
+            font-size: 28px;
+            line-height: 100%;
+            width: 100%;
+            height: 45px;
+            text-transform: initial;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 15px;
+        }
+    }
+
+    .cart_right_subtotal_title {
+        color: $gray_light;
+        font-size: 22px;
+        font-family: $lato;
+        letter-spacing: 1px;
+    }
+
+    .cart_right_subtotal_price {
+        color: $red_light;
+        font-family: $lato;
+        font-size: 22px;
+    }
+}

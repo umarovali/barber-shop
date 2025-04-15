@@ -1,0 +1,9 @@
+.hairstyle_all {
+    padding-top: 40px;
+    .hairstyle_wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}

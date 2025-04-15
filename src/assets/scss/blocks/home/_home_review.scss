@@ -1,0 +1,134 @@
+.home_review {
+    .review_title {
+        font-size: 34px;
+        color: $white_light;
+        font-family: $montserrat;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        & span {
+            color: $red_light;
+            font-weight: 700;
+            font-size: 38px;
+        }
+    }
+
+    .review_suptitle {
+        padding-top: 10px;
+        font-size: 16px;
+        color: #ffffffc3;
+        font-family: $montserrat;
+        font-weight: 400;
+        line-height: 22px;
+        width: 350px;
+    }
+
+    .review_text_btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 70px;
+    }
+
+    .button {
+        position: relative;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border: 1px solid #9b0808;
+        background-color: $red_light;
+        outline: none;
+    }
+
+    .button,
+    .button__icon,
+    .button__text {
+        transition: all 0.3s;
+    }
+
+    .button .button__text {
+        transform: translateX(30px);
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .button .button__icon {
+        position: absolute;
+        transform: translateX(109px);
+        height: 100%;
+        width: 39px;
+        background-color: #9b0808;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button .svg {
+        width: 30px;
+        stroke: #fff;
+    }
+
+    .button:hover {
+        background: #9b0808;
+    }
+
+    .button:hover .button__text {
+        color: transparent;
+    }
+
+    .button:hover .button__icon {
+        width: 148px;
+        transform: translateX(0);
+    }
+
+    .button:active .button__icon {
+        background-color: #d61313;
+    }
+
+    .button:active {
+        border: 1px solid #d61313;
+    }
+
+    .review_wrapper {
+        display: flex;
+        align-items: start;
+        overflow-x: scroll;
+        gap: 30px;
+        margin: 30px 70px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1030px) {
+    .home_review {
+        .review_wrapper {
+            margin: 30px 10px;
+        }
+
+        .review_text_btn {
+            padding: 0px 10px;
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .home_review {
+        .review_text_btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .review_title,
+        .review_suptitle {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

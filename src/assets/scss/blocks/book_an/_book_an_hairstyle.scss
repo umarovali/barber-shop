@@ -1,0 +1,108 @@
+.book_an_hairstyle {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 40px;
+    padding-bottom: 30px;
+
+    .hairstyl_item_btn {
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        padding: 5px 10px;
+        background: $red_light;
+        border-radius: 5px;
+        border: 0px;
+        color: $white_light;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: 0.3s linear;
+
+        &:hover {
+            background: rgb(154, 3, 3);
+            transform: scale(1.1);
+        }
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hairstyle_title {
+        text-align: center;
+        color: $black_light;
+        font-size: 28px;
+        font-family: $montserrat;
+        letter-spacing: 1px;
+        width: 100%;
+    }
+
+    .hairstyle_catgory {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding-top: 10px;
+    }
+
+    .hairstyle_btn {
+        width: 100%;
+        height: 30px;
+        background: $red_light;
+        border-radius: 5px;
+        border: 0px;
+        color: $white_light;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: 0.3s linear;
+
+        &:hover {
+            background: rgb(154, 3, 3);
+            transform: scale(1.1);
+        }
+    }
+
+    .hairstyle_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding-top: 30px;
+    }
+
+    .hairstyl_item {
+        border-radius: 15px;
+        background: #c3c3c3;
+        cursor: pointer;
+    }
+
+    .hairstyl_item_foto {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .hairstyle_content {
+        padding: 10px;
+    }
+    
+    .hairstyl_item_title {
+        letter-spacing: 1px;
+        font-family: $lato;
+        font-size: 22px;
+        color: $black_light;
+        font-weight: 700;
+    }
+
+    .hairstyl_item_suptitle {
+        letter-spacing: 1px;
+        font-family: $montserrat;
+        font-size: 12px;
+        color: #1d1d1d;
+        padding-top: 2px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+}

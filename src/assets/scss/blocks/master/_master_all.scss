@@ -1,0 +1,43 @@
+.masters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.master-card {
+    background: #444;
+    border: 1px solid #373636;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px #444;
+    }
+}
+
+.master-avatar {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.master-name {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: $white_light;
+}
+
+.master-experience,
+.master-price,
+.master-category {
+    font-size: 1em;
+    margin: 5px 0;
+    color: lighten($white_light, 20%);
+}

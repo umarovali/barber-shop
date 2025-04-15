@@ -1,0 +1,257 @@
+.search {
+    width: 100%;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .search_bg {
+        width: 100%;
+        height: 100%;
+        background: #8080804e;
+        display: flex;
+        align-items: center;
+    }
+
+    .search_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 70px;
+    }
+
+
+    .search_left {
+        position: relative;
+
+        input {
+            width: 62px;
+            height: 62px;
+            border-radius: 32px;
+            transition: width 0.5s ease;
+            border: none;
+            outline: none;
+            animation: shake 2s ease infinite;
+            animation-delay: 1s;
+        }
+
+        &.expanded input {
+            width: 240px;
+            padding-left: 74px;
+            font-size: 20px;
+            color: $gray_light;
+            letter-spacing: 1px;
+            font-family: $montserrat;
+            animation: none;
+        }
+
+        button {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: none;
+            background: $red_light;
+            color: $white_light;
+            font-size: 37px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 3px;
+            transform: translate(0px, -50%);
+            cursor: pointer;
+            transition: 0.5s ease;
+            animation: none;
+        }
+
+        &.expanded button {
+            transform: scale(1.3);
+            top: 0px;
+            left: 4px;
+            font-size: 41px;
+            background: $gray_light;
+            color: $white_light;
+            animation: shakeBTN 2s ease infinite;
+        }
+
+        @keyframes shake {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+            }
+
+            70% {
+                box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+
+        @keyframes shakeBTN {
+            0% {
+                box-shadow: 0 0 0 0 #ffffff33;
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px #ffffff00;
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 #ffffff00;
+            }
+        }
+    }
+
+    .search_right {
+        z-index: 500;
+        position: relative;
+
+        button {
+            position: relative;
+            width: 200px;
+            height: 40px;
+            background: $white_light;
+            color: $gray_light;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: initial;
+            font-family: $montserrat;
+            display: flex;
+            justify-content: start;
+            padding-left: 8px;
+            transition: 1s linear;
+            box-shadow: 0 0 4px 0.5px #ffffff67;
+
+
+            &:hover {
+                box-shadow: 0 0 4px 2px #ffffff67;
+            }
+
+            .btn_icon {
+                position: absolute;
+                right: 3px;
+                top: 50%;
+                transform: translate(0px, -50%);
+                font-size: 26px;
+            }
+
+            span {
+                transition: all 0.6s ease;
+            }
+
+            .span {
+                font-size: 10px;
+                position: absolute;
+                letter-spacing: 2px;
+                left: 5px;
+                top: -20px;
+                transition: all 0.6s ease;
+                font-weight: 700;
+                color: $white_light;
+            }
+        }
+
+    }
+
+    .search_options {
+        position: absolute;
+        left: 0px;
+        top: 115%;
+        width: 100%;
+        background: $white_light;
+        border-radius: 10px;
+        transition: .7s ease-in-out;
+        overflow: hidden;
+        z-index: 1000;
+        box-shadow: 0 0 4px 0.5px #ffffff67;
+
+        li {
+            padding: 5px 10px;
+            background: $white_light;
+            font-size: 16px;
+            color: $black_light;
+            font-family: $lato;
+            letter-spacing: 1px;
+
+            &:hover {
+                background: #d3d3d3;
+                overflow-y: hidden;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .search {
+        height: 90px;
+
+        .search_wrapper {
+            padding: 0px 0px;
+        }
+
+        .search_left {
+
+            input {
+                width: 50px;
+                height: 50px;
+            }
+
+            &.expanded input {
+                font-size: 16px;
+                width: 200px;
+                padding-left: 64px;
+            }
+
+            button {
+                width: 44px;
+                height: 44px;
+                font-size: 30px;
+            }
+
+            &.expanded button {
+                font-size: 32px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 550px) {
+    .search {
+        height: 145px;
+
+        .search_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .search_left {
+
+            input {
+                width: 60px;
+                height: 60px;
+            }
+
+            &.expanded input {
+                width: 230px;
+                font-size: 18px;
+                padding-left: 74px;
+            }
+
+            button {
+                width: 54px;
+                height: 54px;
+                font-size: 32px;
+            }
+
+            &.expanded button {
+                font-size: 34px;
+            }
+        }
+    }
+}

@@ -1,0 +1,192 @@
+.paralax_slider {
+    .swiper {
+        width: 100%;
+        height: 100svh;
+    }
+
+    .swiper-slide {
+        position: relative;
+    }
+
+    .parallax-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 130%;
+        height: 100%;
+        background-image: url(https://men.24tv.ua/resources/photos/news/202403/2510251.jpg?v=1709885293000);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .paralax_wrapper {
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        display: flex;
+        align-items: center;
+        gap: 140px;
+        transform: translateX(-50%);
+    }
+
+    .slider_bg {
+        width: 420px;
+        background: #41414177;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        transform: translateX(0);
+        opacity: 1;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+
+    .paralax_title {
+        font-size: 34px;
+        font-family: $montserrat;
+        color: $white_light;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px #00000055;
+    }
+
+    .paralax_suptitle {
+        color: #c6c6c6;
+        font-family: $montserrat;
+        letter-spacing: 1px;
+        font-size: 18px;
+        padding-top: 5px;
+    }
+
+    .paralax_btn button {
+        background: $red_light;
+        margin-top: 15px;
+        text-transform: initial;
+        letter-spacing: 2.5px;
+        font-family: $montserrat;
+        height: 40px;
+        font-size: 19px;
+        position: relative;
+
+        &:hover {
+            background: #a90202;
+            transform: scale(1.02);
+        }
+    }
+
+    .paralax_foto {
+        width: 450px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .parlax_img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid $golden_light;
+    }
+}
+
+@media (max-width: 1150px) {
+    .paralax_slider {
+
+        .paralax_wrapper {
+            gap: 70px;
+        }
+
+        .slider_bg {
+            width: 370px;
+        }
+
+        .paralax_title {
+            font-size: 30px;
+        }
+
+        .paralax_suptitle {
+            font-size: 16px;
+        }
+
+        .paralax_foto {
+            width: 380px;
+        }
+
+        .parlax_img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+@media (max-width: 940px) {
+    .paralax_slider {
+
+        .swiper {
+            height: 520px;
+        }
+
+        .parallax-bg {
+            height: 100%;
+            background-position: top;
+        }
+
+        .paralax_wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            gap: 40px;
+            top: 17%;
+        }
+
+        .slider_bg {
+            width: 100%;
+        }
+
+        .paralax_foto {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 765px) {
+    .paralax_slider {
+        .swiper {
+            height: 420px;
+        }
+
+        .paralax_wrapper {
+            top: 22%;
+        }
+
+        .paralax_foto {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .paralax_slider {
+        .swiper {
+            height: 520px;
+        }
+    }
+}
+
+@media (max-width: 455px) {
+    .paralax_slider {
+        .paralax_title {
+            font-size: 26px;
+        }
+
+        .paralax_suptitle {
+            font-size: 13px;
+        }
+
+        .paralax_btn button {
+            font-size: 16px;
+            height: 35px;
+        }
+    }
+}

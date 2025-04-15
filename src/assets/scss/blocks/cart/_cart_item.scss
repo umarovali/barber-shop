@@ -1,0 +1,131 @@
+.cart_item {
+    padding: 12px;
+    background: $white_light;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 650px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+
+    .item_foto {
+        height: 100%;
+
+        img {
+            width: 200px;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .item_title {
+        color: $black_light;
+        font-size: 20px;
+        font-family: $montserrat;
+    }
+
+    .item_suptitle {
+        padding-top: 3px;
+        color: $gray_light;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-family: $lato;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .item_price {
+        padding-top: 3px;
+        color: $golden_light;
+        font-size: 16px;
+        font-family: $lato;
+        font-weight: 700;
+    }
+
+    .item_brand {
+        padding-top: 4px;
+        color: $black_light;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $montserrat;
+
+        span {
+            color: $gray_light;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+    }
+
+    .item_count {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: absolute;
+        bottom: 50px;
+        right: 10px;
+
+        span {
+            font-size: 20px;
+            font-family: $lato
+        }
+    }
+
+    .item_count_btn {
+        width: 28px;
+        height: 28px;
+        border-radius: 5px;
+        border: 2px solid $black_light;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        transition: 0.3s linear;
+        font-size: 18px;
+        cursor: pointer;
+
+        &:hover {
+            background: $black_light;
+            color: $white_light;
+        }
+    }
+
+    .item_delete_order {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .item_delete {
+        font-size: 22px;
+        font-weight: bold;
+        color: $white_light;
+        border: 1px solid $black_light;
+        padding: 4px;
+        border-radius: 5px;
+        background: $black_light;
+        cursor: pointer;
+    }
+
+    .item_order {
+        button {
+            background: $red_light;
+            border-radius: 3px;
+            letter-spacing: 2px;
+            font-family: $montserrat;
+            font-size: 21px;
+            line-height: 100%;
+            padding: 5px 10px;
+            text-transform: initial;
+        }
+    }
+
+}

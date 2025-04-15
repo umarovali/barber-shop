@@ -1,0 +1,93 @@
+.book_main_services {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 40px;
+    padding-bottom: 30px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .services_title {
+        text-align: center;
+        color: $black_light;
+        font-size: 28px;
+        font-family: $montserrat;
+        letter-spacing: 1px;
+        width: 100%;
+    }
+
+    .services_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        row-gap: 20px;
+        margin-top: 20px;
+    }
+
+    .services_item {
+        border-radius: 15px;
+        background: #444;
+        padding: 10px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 3px 2px #5757574f;
+        cursor: pointer;
+        transition: .2s linear;
+
+        &:hover {
+            position: relative;
+            bottom: 7px;
+        }
+    }
+
+    .services_item_title {
+        color: $white_light;
+        font-family: $lato;
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 100%;
+        font-weight: 600;
+    }
+
+    .services_item_suptitle {
+        color: #c3c3c3;
+        font-family: $lato;
+        font-size: 11px;
+        letter-spacing: 1px;
+        line-height: 100%;
+        font-weight: 400;
+        padding-top: 4px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+
+    .services_item_price {
+        color: $golden_light;
+        font-family: $lato;
+        font-weight: 700;
+        font-size: 14px;
+        padding-top: 4px;
+    }
+
+    .services_btn {
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        padding: 5px 10px;
+        background: $red_light;
+        border-radius: 5px;
+        border: 0px;
+        color: $white_light;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: 0.3s linear;
+
+        &:hover {
+            background: rgb(154, 3, 3);
+            transform: scale(1.1);
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.footer {
+    width: 100%;
+    background: #2e2e2e;
+    margin-top: 50px;
+
+
+    .footer_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 40px;
+        gap: 20px;
+    }
+
+    .footer_title {
+        font-size: 18px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $white_light;
+        letter-spacing: 1px;
+        font-family: $lato;
+        text-align: center;
+    }
+
+    .footer_logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .footer_links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .footer_links a {
+        color: #f5f5f5ad;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s;
+        letter-spacing: 1px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #f5f5f5;
+            transition: 0.3s ease;
+            transform: scale(0);
+        }
+
+        &:hover {
+            color: #f5f5f5;
+        }
+
+        &:hover:after {
+            transform: scale(1);
+        }
+    }
+
+
+    .footer_contact {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #f5f5f5;
+        font-family: $lato;
+        letter-spacing: 1px;
+    }
+
+    .footer_contact svg {
+        margin-right: 10px;
+        font-size: 20px;
+        color: $red_light;
+    }
+
+    .footer_hr {
+        margin-top: 60px;
+    }
+
+    .footer_author {
+        padding: 20px 0px;
+        letter-spacing: 1px;
+        font-family: $montserrat;
+        color: $white_light;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        justify-content: start;
+        padding-left: 110px;
+
+        span {
+            color: $red_light;
+            font-weight: 600;
+        }
+    }
+
+}
+
+@media (max-width: 780px) {
+    .footer {
+        .footer_wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 150px;
+            row-gap: 35px;
+        }
+
+        .footer_hr {
+            margin-top: 15px;
+        }
+
+        .footer_author {
+            display: flex;
+            justify-content: center;
+            padding-left: 0px;
+        }
+    }
+}
+
+@media (max-width: 563px) {
+    .footer {
+        .footer_contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}

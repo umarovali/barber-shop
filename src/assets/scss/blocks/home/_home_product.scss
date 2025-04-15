@@ -1,0 +1,198 @@
+.home_product {
+    padding: 40px 0px;
+
+    .product_left_right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .produt_title {
+        font-size: 34px;
+        color: $white_light;
+        font-family: $montserrat;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        & span {
+            color: $red_light;
+            font-weight: 700;
+            font-size: 38px;
+        }
+    }
+
+    .product_suptitle {
+        padding-top: 10px;
+        font-size: 16px;
+        color: #ffffffc3;
+        font-family: $montserrat;
+        font-weight: 400;
+        line-height: 22px;
+        width: 350px;
+    }
+
+    .product_btn {
+        button {
+            background: $red_light;
+            margin-top: 10px;
+            text-transform: initial;
+            letter-spacing: 2.5px;
+            font-family: $montserrat;
+            width: 180px;
+            height: 40px;
+            font-size: 19px;
+            position: relative;
+
+            &:hover {
+                background: #a90202;
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    .product_brand {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .product_choose_brand {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        overflow-x: scroll;
+        white-space: nowrap;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .product_brand_btn {
+        padding: 6px 16px 8px 16px;
+        border-radius: 16px;
+        color: $white_light;
+        border: 1px solid $gray_light;
+        background: #00000000;
+        cursor: pointer;
+        transition: .4s ease-in-out;
+        letter-spacing: 1px;
+
+        &:hover {
+            background: $gray_light;
+        }
+    }
+
+    .product_brand_title {
+        color: $white_light;
+        font-family: $lato;
+        font-size: 22px;
+        letter-spacing: 1px;
+        width: 240px;
+        white-space: nowrap;
+    }
+
+    .product_scroll {
+        overflow-x: scroll;
+        margin-top: 20px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .product_wrapper {
+        display: flex;
+        gap: 30px;
+        width: fit-content;
+        padding: 10px 0px;
+    }
+
+    .product_found_wrapper {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 60px;
+
+        .product_found_img {
+            width: 600px;
+            height: 350px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .product_fount_text {
+            color: $white_light;
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .home_product {
+
+        .product_left_right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .product_left {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .produt_title {
+            width: 100%;
+            text-align: center;
+        }
+
+        .product_suptitle {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .home_product {
+        .product_brand_btn {
+            font-size: 13px;
+            padding: 4px 10px 6px 10px;
+        }
+
+        .product_brand_title {
+            font-size: 18px;
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .home_product {
+        .produt_title {
+            font-size: 28px;
+
+            span {
+                font-size: 32px;
+            }
+        }
+
+        .product_suptitle {
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .product_btn {
+            button {
+                font-size: 16px;
+                width: 150px;
+                height: 35px;
+            }
+        }
+    }
+}
